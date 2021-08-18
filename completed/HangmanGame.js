@@ -24,7 +24,17 @@ class HangmanGame {
     }
 
     render() {
-        const wonMessage = this.isOver() ? "* * * You Won! * * * \n\n" : "";
+        // Instead of using the ternary operator, we could use this:
+        
+        // let wonMessage;
+        // if(this.isOver()) {
+        //     wonMessage = "* * * You Won! * * * \n\n"
+        // }
+        // else {
+        //     wonMessage = ""
+        // }
+
+        const wonMessage = (this.isOver()) ? "* * * You Won! * * * \n\n" : "";
         const alreadyGuessed = (!this.isOver()) ? "\n\nAlready Guessed Letters:\n" + this.guessedLetters.join(", ") : "";
         return (
             wonMessage +

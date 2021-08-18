@@ -20,6 +20,9 @@ class ComputerPlayer {
             return this.letters[0];
 
         const randomIndex = Math.floor(Math.random() * this.letters.length);
+        // const guessedLetter = this.letters[randomIndex];
+        // this.letters.splice(randomIndex, 1);
+        // return guessedLetter;
         return this.letters.splice(randomIndex, 1)[0];
     }
 }
